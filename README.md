@@ -1,8 +1,8 @@
 ## Final_Project_Team_SunnyDay
 
-## Final Project - First Segment: Sketch It Out
+Final Project - First Segment: Sketch It Out
 
-### Team Members: Jake Zebker, Kellen Schmitz, Chung In "Angel" Ngan, Angela Kumar
+Team Members: Jake Zebker, Kellen Schmitz, Chung In "Angel" Ngan, Angela Kumar
 
 ### Selected topic: Solar energy to save on electricity and does one qualify based on the number of sunny days that your state incurs
 
