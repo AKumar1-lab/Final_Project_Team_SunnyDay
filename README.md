@@ -1,11 +1,12 @@
 ## Final_Project_Team_SunnyDay
 
-## Final Project - First Segment: Sketch It Out
+Final Project - First Segment: Sketch It Out
 
-### Team Members: Jake Zebker, Kellen Schmitz, Chung In "Angel" Ngan, Angela Kumar
+##### Team Members: Jake Zebker, Kellen Schmitz, Chung In "Angel" Ngan, Angela Kumar
 
-### Selected topic: Analysis of solar energy potential for a given location (in US).
- to save on electricity and does one qualify based on the number of sunny days that your state incurs
+##### Selected topic: 
+
+Analysis of solar energy potential for a given location (in US) to save on electricity and does one qualify based on the number of sunny days that your state incurs
 
 ### Purpose
 
@@ -18,7 +19,7 @@ Machine Learning: to predict the actual sunny days, when including weather, for 
 Visualization:  Mapping the number of sunny days that a location receives on average. Graph of solar potential over a year (showing seasonal variability) for the location. 
 Graph of historical average electricity price for given area. Etc.
 
-Story telling: Mapbox/JS/Plotly or Tableau story board
+Story telling: Mapbox/JS/Plotly or Tableau story board 
 
 ### Description of their source of data 
 
