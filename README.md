@@ -1,6 +1,4 @@
 
-![image](https://user-images.githubusercontent.com/85860367/141755693-e08d6881-7a2a-420b-8724-2a88d9c45cc2.png)
-
 
 ## Final_Project_Team_SunnyDay
 
@@ -62,6 +60,8 @@ https://www.nrel.gov/gis/index.html
 https://www.nrel.gov/gis/solar-supply-curves.html
 
 https://developer.nrel.gov/docs/solar/nsrdb/ = There is an API for some weather data, based on longitude and latitude
+
+References: Sengupta, M., Y. Xie, A. Lopez, A. Habte, G. Maclaurin, and J. Shelby. 2018. "The National Solar Radiation Data Base (NSRDB)." Renewable and Sustainable Energy Reviews  89 (June): 51-60.
 
 Additional likely sources include: WeatherData, Department of Energy, NOAA.gov, NASA, trade groups
 
