@@ -1,19 +1,27 @@
 # Importing dependencies
 import pandas as pd
-#import pickle
+from sqlalchemy import create_engine
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import r2_score
 
 def predict_ghi(zipcode,monthly_bill):
-    # Read in data
+    # Read in data - SQL/Postgrsql
+    #engine = create_engine("postgresql://postgres:<password>@localhost:5432/<db-name>")
+    #df=pd.read_sql("SELECT * FROM solar;", engine)
+    #zips=pd.read_sql("SELECT * FROM zips_electric;", engine)
+
+    # Read in data - Pandas
     df=pd.read_csv('pv_open_2020.csv')
     zips=pd.read_csv('zipcodes_electric.csv')
 
     # Get lat,lng and elec_rate from zipcode
     coords=zips.loc[zips['zip']==int(zipcode)][['latitude','longitude']].values
+    #elec_rate=zips.loc[zips['zip']==int(zipcode)][['rate']].values #name for sql table
     elec_rate=zips.loc[zips['zip']==int(zipcode)][['residential_electric_rate_(cents/kWh)']].values
     elec_rate=elec_rate/100
+
+    # Get County, State
     county_state=zips.loc[zips['zip']==int(zipcode)][['county','state']].values
     
     # Calculate yearly bill from user input monthly bill

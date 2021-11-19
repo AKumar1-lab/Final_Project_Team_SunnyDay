@@ -29,4 +29,4 @@ def predict():
         sys_cost_est = num_panels*300*2.68*.74
         payback_period_years = f"{round(sys_cost_est/yearly_bill,2)} years"
 
-        return render_template("results.html", results=ghi, coords=[lng,lat], r2=r2_score, zip=zipcode, payback=payback_period_years, county=county)
+        return render_template("results.html", results=ghi, coords=[lng,lat], r2=r2_score, zip=zipcode, payback=payback_period_years, county=county, sys_cost=round(sys_cost_est,2))

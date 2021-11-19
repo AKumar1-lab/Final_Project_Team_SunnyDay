@@ -23,7 +23,7 @@ zoom: 14 // starting zoom
 });
 
 const popup = new mapboxgl.Popup({ offset: 25 }).setHTML(
-'<b>ZIP:</b> {{county}} {{zip}}<br><b>Payback Period:</b> {{payback}}<br><b>Global Horizontal Irradiance (GHI):</b><br>{{results}}<br><b>GHI Accuracy (R2):</b> {{r2}}'
+'<b>ZIP:</b> {{county}} {{zip}}<br><b>Est. System Cost:</b> ${{sys_cost}}<br><b>Payback Period:</b> {{payback}}<br><b>Global Horizontal Irradiance (GHI):</b><br>{{results}}<br><b>GHI Accuracy (R2):</b> {{r2}}'
 );
 
 const marker = new mapboxgl.Marker({ color: 'yellow' })
