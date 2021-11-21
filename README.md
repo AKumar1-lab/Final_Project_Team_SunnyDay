@@ -111,9 +111,32 @@ In the Final_Project_Team_SunnyDay repository each member has their own branch.
 
 #### Machine Learning Model
 
-Steps
+Machine Learning: Predicting the amount of time to pay back solar installation costs from savings on electric bill from user input zipcode and monthly bill
 
-Pre- processing 
+Data was pretty clean to begin with so not much preprocessing was necessary
+Chose to include most recent electric rate data (2020)
+Chose residential electric rates because likely user is a home owner looking to install solar
+Added electric rates to zipcode database for simplicity
+Feature engineering
+Issue to be solved: did not have GHI values for every zip code in the contiguous US, GHI is measured at different locations throughout the country
+Solution: use the values we have (latitude and longitude) to predict values we don't have (GHI)
+Randomly chose 1/3 of data to be test set
+Model choice, RandomForestRegression
+Benefits: works well on large dataset, works well on continuous data like we have
+Limitations: cannot predict values outside of our dataset
+Changes to model
+Initially tried to estimate by matching latitude and longitude values to nearby points that we had values for (within .1 degrees)
+Switched to ML model because it worked faster and is more accurate
+Looked at incorporating weather data but deemed unneccessary for ML model because measured GHI value should account for any changes in cloud cover
+
+**Model accuracy**
+R2 score is very high
+Very few outliers in general and neighboring measured values show little change from point to point (GHI is similar in neighboring zip codes)
+
+**Suggestions for future statistical analysis**
+Look deeper into electric power • how is the electricity being generated • look at prices on a finer scale
+Look at alternative forms of energy that may be prevalent in given regions • geothermal, higher ground temperatures or might not need to dig as deep into the ground in some areas • wind, windier in some areas and construction costs vary • hydroelectric, river locations and cleanliness of water
+Look at specific energy needs in different regions (ex: less need for heating in Southern California than in Minnesota)
 
 <img width="362" alt="Flask app screenshot" src="https://user-images.githubusercontent.com/85860367/142750812-f257a1b0-0720-41c4-8871-5fdceb4393a6.PNG">
 
