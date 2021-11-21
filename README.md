@@ -44,6 +44,18 @@ Graph average electricity price for given area
 
 Story telling: Mapbox/JS/Plotly or Tableau story board 
 
+#### Questions we hope to answer with the data
+
+When the user enters variables such as zip code and current electric bill does the global horizontal irradiance predict accurately for the zip code entered?
+
+Based on the zip code,average electric rates the state incurs per kwh along with average cost of the the solar system installation, how many years does it take to breakeven on the cost?
+
+#### Description of the Data Exploration phase of the project
+
+Through the data exploration pre-processing steps, the team examined how the databases interconnected  Additionally field values were unlocked and mapped to their column names. Columns with an overwhelming amount of null data were accessed for their feasibility in the data examination. The challenge of collecting data sets that had current data was hard to find; most data was historical, already 3-5 years old.  Once the dataset was selected, there were numerous variables that would be applicable to the topic.
+
+#### Description of the Analysis Phase of the project
+
 #### Description of their source of data 
 
 **Resources:**
@@ -76,13 +88,13 @@ ML_model.ipynb;
 
 **Languages and Technologies:** 
 
-To read the data into Jupyter Notebooks: Used Excel and CSV files
+To read the data into Jupyter Notebooks for analysis: Used Excel and CSV files
 
 To query, manipulate, clean the data in Jupyter Notebooks:  Python, Pandas;
 
 To visualize the data: used Tableau to present the maps of GHI, Electric Rates, Emissions
 
-For Machine Learning, used Pandas, SkiLearn Libraries, Google Colaboratory
+For Machine Learning, used Pandas, Scikit-Learn Libraries, Google Colaboratory, TensorFlow
 
 To ensure that the Machine Learning app works and available for user input:  Pickle file, JavaScript, Flask app.py, html; VSCode; MapBox; Github Pages.
 
@@ -90,11 +102,6 @@ To ensure that the Machine Learning connected to a data storage SQLAlchemy was u
 
 For the presentation used Google Sheets, Google Slides and for the live presentation used Zoom
 
-#### Questions we hope to answer with the data
-
-When the user enters variables such as zip code and current electric bill does the global horizontal irradiance predict accurately for the zip code entered?
-
-Based on the zip code,average electric rates the state incurs per kwh along with average cost of the the solar system installation, how many years does it take to breakeven on the cost?
 
 #### GitHub
 
@@ -103,6 +110,10 @@ In the Final_Project_Team_SunnyDay repository each member has their own branch.
 
 
 #### Machine Learning Model
+
+Steps
+
+Pre- processing 
 
 <img width="362" alt="Flask app screenshot" src="https://user-images.githubusercontent.com/85860367/142750812-f257a1b0-0720-41c4-8871-5fdceb4393a6.PNG">
 
@@ -151,7 +162,12 @@ Data visualization still to complete with additional graphs , we have a partial 
 #### Summary of Team Findings
 
 
+
 #### Conclusion
+Data can be made to forge a relationship with unrelated data to gain more insight, perspectives, or have better outcomes with Python, Pandas, PostgreSQL.
+We learned new technologies to present our findings with Tableau, Plotly, and Javascript
+It is how we are able to use data to communicate our ideas, persuade another to make key decisions. 
+Data is used to review trends and patterns and can train the computer to make predictions or test assumptions using supervised and unsupervised machine learning.
 
 
 
