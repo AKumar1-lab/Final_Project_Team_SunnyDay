@@ -4,8 +4,13 @@ from ML_model import predict_ghi
 app = Flask(__name__)
 
 @app.route("/")
+@app.route("/N_Home_index.html")
 def index():
-    return render_template("index.html")
+    return render_template("N_Home_index.html")
+
+@app.route("/N_Visual_index.html")
+def visual():
+    return render_template("N_Visual_index.html")
 
 @app.route('/predict',methods=['POST'])
 def predict():
@@ -29,4 +34,4 @@ def predict():
         sys_cost_est = num_panels*300*2.68*.74
         payback_period_years = f"{round(sys_cost_est/yearly_bill,2)} years"
 
-        return render_template("results.html", results=ghi, coords=[lng,lat], r2=r2_score, zip=zipcode, payback=payback_period_years, county=county, sys_cost=round(sys_cost_est,2))
+        return render_template("N_Home_index2.html", results=ghi, coords=[lng,lat], r2=r2_score, zip=zipcode, payback=payback_period_years, county=county, sys_cost=round(sys_cost_est,2))
