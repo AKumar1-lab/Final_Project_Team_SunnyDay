@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UCBerkley:SunnyDay</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- map -->
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.6.0/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.6.0/mapbox-gl.js"></script>
+    <!-- banner -->
+    <style>div.transbox {margin: 20px; background-color: #ffffff; opacity: 0.85;}</style> 
+    <!-- navbar -->
+    <style>
+        ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+          background-color: #333;
+        }
+
+        li {
+          float: left;
+        }
+        
+        li a {
+          display: block;
+          color: white;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+        }
+        
+        li a:hover:not(.active) {
+          background-color: #111;
+        }
+        
+        .active {
+          background-color: #1c415f;
+        }
+        </style>    
+</head>
+
+<body>
+    <!-- banner -->
+    <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-md-12 col-lg-12  jumbotron text-center" style="background-image: url(https://m.foolcdn.com/media/millionacres/original_images/solar_panels.jpg?crop=16:9,smart);background-size: cover;background-repeat: no-repeat;">
+              <div class="transbox">
+                <h1>Sunny Day</h1>
+              </div>
+          </div>
+        </div>
+
+        <!-- navbar -->
+        <div class="row">
+            <ul>
+                <li><a href="N_Home_index.html">Home</a></li>
+                <li><a href="N_Visual_index.html">Visualization</a></li>
+            </ul>
+        </div>
+
+        <br> 
+
+        <!-- form -->
+        <div class="row">
+            <div class="col-md-3">
+                <div class="well">
+                    <h2>Solar Stats</h2>
+                    <h6>Predict period of return when investing solar panel at your residential location</h6>
+                    <form>
+                            <label>Enter your ZIP:</label>
+                            <input name="zipcode" type="text">
+                            <label>Enter your monthly electric bill (USD):</label>
+                            <input name="mon_elec_bill" type="text"><br>
+                            <br>
+                        <input id='form-submit' type="submit">
+                    </form>
+                </div>   
+            </div> 
+
+                <!-- map -->
+                <div id="map" style='width:862px; height: 500px;' ></div>
+        </div>
+    </div>  
+
+    <script>
+      // TO MAKE THE MAP APPEAR YOU MUST
+      // ADD YOUR ACCESS TOKEN FROM
+      // https://account.mapbox.com
+      mapboxgl.accessToken = 'pk.eyJ1IjoianplYmtlciIsImEiOiJja3QwaGQ2Z3AwMTlvMnJxcXY0ajdkNnowIn0.PMabZY4GOtrV8E8w2VIz7w';
+      let map = new mapboxgl.Map({
+          container: 'map', // container ID
+          style: 'mapbox://styles/mapbox/streets-v11', // style URL
+          center: [-95.712891, 37.09024], // starting position [lng, lat]
+          zoom: 3 // starting zoom
+      });
+      
+      let popup;
+
+      const submitBtn = document.getElementById('form-submit');
+
+      submitBtn.addEventListener('click', submitHandler);
+      console.log(submitBtn)
+
+      function submitHandler(event) {
+        event.stopPropagation();
+        event.preventDefault();
+
+        const zipcode = document.getElementsByName('zipcode')[0].value;
+        const mon_elec_bill = document.getElementsByName('mon_elec_bill')[0].value 
+        // Check for valid zipcode and bill value
+
+
+        const postData = {
+          zipcode,
+          mon_elec_bill,
+        }
+        post('/predict', postData).then((responseData) => {
+          const {
+            yearly_bill,
+           daily_elec_use,
+           ac_capacity,
+            dc_capacity,
+           num_panels,
+           sys_cost_est,
+            payback_period_years,
+            county,
+            zipcode,
+            lat,
+            lng
+        } = responseData;
+
+        map = new mapboxgl.Map({
+          container: 'map', // container ID
+          style: 'mapbox://styles/mapbox/streets-v11', // style URL
+          center: [lng, lat], // starting position [lng, lat]
+          zoom: 14 // starting zoom
+      });
+
+          popup = new mapboxgl.Popup({ offset: 25 }).setHTML(
+            '<b>ZIP:</b> {{county}} {{zip}}<br><b>Est. System Cost:</b> ${{sys_cost}}<br><b>Payback Period:</b> {{payback}}<br><b>Global Horizontal Irradiance (GHI):</b><br>{{results}}<br><b>GHI Accuracy (R2):</b> {{r2}}'          );
+
+          const marker = new mapboxgl.Marker({ color: 'yellow' })
+              .setLngLat({lng, lat})
+              .setPopup(popup)
+              .addTo(map);
+        });
+      }
+
+      async function post(url = '', data = {}) {
+        // Default options are marked with *
+        const response = await fetch(url, {
+          method: 'POST', // *GET, POST, PUT, DELETE, etc.
+          mode: 'cors', // no-cors, *cors, same-origin
+          cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+          credentials: 'same-origin', // include, *same-origin, omit
+          headers: {
+            'Content-Type': 'application/json'
+            // 'Content-Type': 'application/x-www-form-urlencoded',
+          },
+          redirect: 'follow', // manual, *follow, error
+          referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+          body: JSON.stringify(data) // body data type must match "Content-Type" header
+        });
+        return response.json(); // parses JSON response into native JavaScript objects
+    }
+
+
+
+  </script>
+
+</body>
+</html>
