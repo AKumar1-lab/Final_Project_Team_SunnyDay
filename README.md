@@ -173,20 +173,22 @@ Predicting the amount of time to pay back solar installation costs from savings 
      - R2 score is very high
      - Very few outliers in general and neighboring measured values show little change from point to point (GHI is similar in neighboring zip codes)
 
-![image](https://user-images.githubusercontent.com/85860367/143193658-d9c04ed7-af2f-4ed6-bff1-29b948004b54.png)
+<img width="837" alt="image of solar roi" src="https://user-images.githubusercontent.com/85860367/143205617-d668379a-af95-4368-b289-c5880f346fd8.PNG">
+
+<img width="837" alt="image of solar roi part 2" src="https://user-images.githubusercontent.com/85860367/143205353-97a5a808-9817-4a79-b5d4-6bc07354235f.PNG">
 
 
 #### Database Integration
 
 PostgreSQL was used to store the data as the Machine learning Model connected via SQLAlchemy
 
-![QuickDBD-export FINAL](https://user-images.githubusercontent.com/85860367/143191496-6611cf21-f283-444f-9627-3ef99c2eed0e.png)
+<img width= "359" alt="QuickDBD-export FINAL" src="https://user-images.githubusercontent.com/85860367/143191496-6611cf21-f283-444f-9627-3ef99c2eed0e.png">
 
-<img width="359" alt="SQL to ML Model screenshot" src="https://user-images.githubusercontent.com/85860367/142750454-df90466d-ddaa-4321-9cdc-7946d1740904.PNG">
+<img width="500" alt="SQL to ML Model screenshot" src="https://user-images.githubusercontent.com/85860367/142750454-df90466d-ddaa-4321-9cdc-7946d1740904.PNG">
 
 #### Dashboard and Storyboard
 
-Visualization: Tableau and enable it on webpage with html, the screenshot is found in the overview section.
+Visualization: Tableau and enable it on webpage with html, the screenshot is found in the Machine Learning section.
 
 Use lat and long to create map and include corresponding elements to present data by state, create layout with graph and description in dashboard, and then add dashboards into a story.
 
