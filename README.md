@@ -16,7 +16,7 @@ Final Project
 
 ### Presentation
 
-[Google Presentation](https://docs.google.com/presentation/d/1NlID66oew1rf0fiu6xpsiVMICq4d7zu0/edit?usp=sharing&ouid=105447566363535601541&rtpof=true&sd=true)
+[Google Presentation](https://docs.google.com/presentation/d/1vrc88HmhkGwYJBcf0R1ZEU2HqMBQhZUv/edit?usp=sharing&ouid=105447566363535601541&rtpof=true&sd=true)
 
 #### Selected topic: 
 
