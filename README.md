@@ -215,10 +215,10 @@ Summary Findings by the team:  Increase trend of renewable energy such solar suc
 
 There was a search conducted on unrelated datasets on US Census Datasets in the areas of the following:
 
-    *population, 
-    *income disparity, 
-    *labor, and 
-    *congressional districts.  
+    * population, 
+    * income disparity, 
+    * labor, and 
+    * congressional districts.  
     
  This further analysis would give us more insight on who and where the solar adopters are.
 
