@@ -18,6 +18,8 @@ Final Project
 
 [Google Presentation](https://docs.google.com/presentation/d/1vrc88HmhkGwYJBcf0R1ZEU2HqMBQhZUv/edit?usp=sharing&ouid=105447566363535601541&rtpof=true&sd=true)
 
+[Heroku Link for the Flask App Demo](https://immense-beyond-75647.herokuapp.com)
+
 #### Selected topic: 
 
 Analysis of solar energy potential based on the zip code in the Contiguous United States has the potential cost savings on electricity and the machine learning prediction does zip code qualify based on the number of sunny days or global horizontal irradiance(GHI) in that location, if so, how much will be the system installation and how many years will it take to breakeven.
@@ -202,27 +204,34 @@ Enable Tableau to webpage with html code, so user can interact with the graph in
 
 ![Why Go Solar Energy ghi](https://user-images.githubusercontent.com/85860367/142751105-94af2a39-b382-408c-824b-07e3c345d1e0.png)
 
+[Tableau Storyboard](https://public.tableau.com/app/profile/chung.in.ngan/viz/FinalProject-SolarPanelVisualization/WhyGoSolarEnergy)
 
 #### Summary of Team Findings
 
-Summary Findings by the team:  Increase trend of renewable energy such solar such as rooftop solar; electric prices are increasing per year so investing in solar reduces the electric cost over the life of the installation. It is forecasted that climate change will worsen over time such as drought, wildfire and greenhouse gas emissions.  There is a push to decarbonize the environment.    
+There is a noticable increase trend of renewable energy such solar such as rooftop solar; electric prices are increasing per year so investing in solar reduces the electric cost over the life of the installation. It is forecasted that climate change will worsen over time such as drought, wildfire and greenhouse gas emissions.  There is a push to decarbonize the environment.    
 
+ - A database with complete information on installed residential solar in the US does not exist (I was surprised by this)
+ - Residential electricity rates are stable in most places in the US
+ - Learned how to collaborate and coordinate deliverables with a team exclusively online
+ - Learned how to better utilize and integrate a lot of the tools we were introduced to in the class 
+ - 
 #### Result of the analysis
 
-
+- Most places in the US have enough sun to justify the upfront cost of installing solar.
+- Payback periods depend on sun and electricity costs in your area
 
 #### Recommendation for future analysis
 
-There was a search conducted on unrelated datasets on US Census Datasets in the areas of the following:
+There was a search conducted on unrelated datasets on US Census Datasets but not used in the areas of the following:
 
-    * population, 
-    * income disparity, 
-    * labor, and 
-    * congressional districts.  
+    * population
+    * income disparity 
+    * labor
+    * congressional districts
     
  This further analysis would give us more insight on who and where the solar adopters are.
 
-* Suggestions for future statistical analysis
+* Suggestions for additional statistical analysis
      - Look deeper into electric power
         • how is the electricity being generated
         • look at prices on a finer scale
@@ -235,7 +244,8 @@ There was a search conducted on unrelated datasets on US Census Datasets in the 
 
 #### Anything the team would have done differently
 
-
+- Knowing now that there is no comprehensive residential solar database, we may have looked at how to answer that question
+- Would have like to incorporate more graphs to indicate trends and patterns over time.
 
 
 #### Conclusion
