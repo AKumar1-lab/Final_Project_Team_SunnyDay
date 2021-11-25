@@ -18,6 +18,8 @@ Final Project
 
 [Google Presentation](https://docs.google.com/presentation/d/1vrc88HmhkGwYJBcf0R1ZEU2HqMBQhZUv/edit?usp=sharing&ouid=105447566363535601541&rtpof=true&sd=true)
 
+[Heroku Link for the Flask App Demo](https://immense-beyond-75647.herokuapp.com)
+
 #### Selected topic: 
 
 Analysis of solar energy potential based on the zip code in the Contiguous United States has the potential cost savings on electricity and the machine learning prediction does zip code qualify based on the number of sunny days or global horizontal irradiance(GHI) in that location, if so, how much will be the system installation and how many years will it take to breakeven.
