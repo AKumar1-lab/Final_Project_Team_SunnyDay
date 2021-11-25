@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UCBerkley BC: Sunnyday</title>
+    <title>UCBerkeley BC: Sunnyday</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <!-- map -->
     <link href="https://api.mapbox.com/mapbox-gl-js/v2.6.0/mapbox-gl.css" rel="stylesheet">
     <script src="https://api.mapbox.com/mapbox-gl-js/v2.6.0/mapbox-gl.js"></script>
     <!-- banner -->
-    <style>div.transbox {margin: 20px; background-color: #ffffff; opacity: 0.85;}</style> 
+    <style>div.transbox {margin: 20px; background-color: #ffffff; opacity: 0.9;}</style> 
     <!-- navbar -->
     <style>
         ul {
@@ -49,7 +49,8 @@
         <div class="row">
           <div class="col-xs-12 col-md-12 col-lg-12  jumbotron text-center" style="background-image: url(https://m.foolcdn.com/media/millionacres/original_images/solar_panels.jpg?crop=16:9,smart);background-size: cover;background-repeat: no-repeat;">
               <div class="transbox">
-                <h1>Sunny Day</h1>
+                <h1>Solar Electric Sytem</h1>
+                <h3>Estimate the Cost & Payback Period</h3>
               </div>
           </div>
         </div>
@@ -68,7 +69,8 @@
         <div class="row">
             <div class="col-md-3">
                 <div class="well">
-                    <h2>Solar Stats</h2>
+                    <h2>Solar Panel ROI</h2>
+                    <h6>Predict GHI to calculate the payback period for your residential solar</h6>
                     <form action="/predict" method="POST">
                             <label>Enter your ZIP:</label>
                             <input name="zipcode" type="text">
